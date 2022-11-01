@@ -21,6 +21,22 @@ class Battlefield():
         print(f"{self.robot_fighter.name} has {self.robot_fighter.health} health left!")
         self.robot_fighter.attack(self.dinosaur_fighter)
         print(f"{self.dinosaur_fighter.name} has {self.dinosaur_fighter.health} health left!")
+        self.robot_fighter.attack_2(self.dinosaur_fighter)
+        print(f"{self.dinosaur_fighter.name} has {self.dinosaur_fighter.health} health left!")
+        self.dinosaur_fighter.attack(self.robot_fighter)
+        print(f"{self.robot_fighter.name} has {self.robot_fighter.health} health left!")
+        self.robot_fighter.attack_2(self.dinosaur_fighter)
+        print(f"{self.dinosaur_fighter.name} has {self.dinosaur_fighter.health} health left!")
+        self.dinosaur_fighter.attack(self.robot_fighter)
+        print(f"{self.robot_fighter.name} has {self.robot_fighter.health} health left!")
+        self.robot_fighter.attack_3(self.dinosaur_fighter)
+        print(f"{self.dinosaur_fighter.name} has {self.dinosaur_fighter.health} health left!")
+        self.dinosaur_fighter.attack(self.robot_fighter)
+        print(f"{self.robot_fighter.name} has {self.robot_fighter.health} health left!")
+
 
     def display_winner(self):
-        pass
+        if self.dinosaur_fighter.health == 0:
+            print(f"{self.dinosaur_fighter.name} has no health left! They've been defeated!\n{self.robot_fighter.name} WINS!!!")
+        else:
+            print(f"{self.robot_fighter.name} has no health left! They've been defeated!\n{self.dinosaur_fighter.name} WINS!!!")
